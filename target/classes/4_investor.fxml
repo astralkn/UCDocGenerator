@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4e64bf;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memoriu.controller.Controller_4">
+    <children>
+        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="380.0" prefWidth="580.0" style="-fx-background-color: white;">
+            <children>
+                <VBox prefHeight="380.0" prefWidth="580.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="580.0" text="Generator memoriu Certificat de Urbanism" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="580.0" text="Detalii beneficiar/Investitor" textAlignment="CENTER" />
+                  <JFXListView fx:id="listInvestors_4"
+                               orientation="HORIZONTAL" prefHeight="60.0"
+                               prefWidth="580.0" />
+                        <HBox prefHeight="20.0" prefWidth="580.0" spacing="10.0">
+                            <children>
+                                <JFXRadioButton fx:id="rbPrivatePerson"
+                                                onAction="#setPrivatePerson_4" prefHeight="17.0" prefWidth="273.0" text="Persoana Fizica" />
+                                <JFXRadioButton fx:id="rbLegalPerson"
+                                                onAction="#setLegalPerson_4"
+                                                prefHeight="17.0" prefWidth="279.0" text="Persoana Juridica" />
+                            </children>
+                            <padding>
+                                <Insets left="10.0" right="10.0" />
+                            </padding>
+                        </HBox>
+                        <JFXTextField fx:id="tfName_4" prefHeight="30.0" prefWidth="400.0" promptText="Nume...">
+                            <font>
+                                <Font name="System Italic" size="12.0" />
+                            </font>
+                            <padding>
+                                <Insets left="10.0" right="10.0" />
+                            </padding>
+                        </JFXTextField>
+                        <HBox prefHeight="30.0" prefWidth="580.0"
+                              spacing="10.0">
+                        <JFXTextField fx:id="tfUniqueID_4" prefHeight="30.0" prefWidth="400.0" promptText="CNP/CUI...">
+                            <font>
+                                <Font name="System Italic" size="12.0" />
+                            </font>
+                            <padding>
+                                <Insets left="10.0" right="10.0" />
+                            </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="tfRegistrationID_4" prefHeight="30.0" prefWidth="400.0" promptText="*Numar de inregistrare la registrul Comertului...">
+                            <font>
+                                <Font name="System Italic" size="12.0" />
+                            </font>
+                            <padding>
+                                <Insets left="10.0" right="10.0" />
+                            </padding>
+                        </JFXTextField>
+                        </HBox>
+                        <JFXTextField fx:id="tfCounty_4" prefHeight="30.0" prefWidth="400.0" promptText="Judet...">
+                            <font>
+                                <Font name="System Italic" size="12.0" />
+                            </font>
+                            <padding>
+                                <Insets left="10.0" right="10.0" />
+                            </padding>
+                        </JFXTextField>
+                  <HBox prefHeight="30.0" prefWidth="580.0">
+                     <children>
+                              <JFXTextField fx:id="tfCity_4" prefHeight="30.0" prefWidth="400.0" promptText="Oras...">
+                                  <font>
+                                      <Font name="System Italic" size="12.0" />
+                                  </font>
+                                  <padding>
+                                      <Insets left="10.0" right="10.0" />
+                                  </padding>
+                              </JFXTextField>
+                              <JFXTextField fx:id="tfDistrict_4" prefHeight="30.0" prefWidth="400.0" promptText="Sector...">
+                                  <font>
+                                      <Font name="System Italic" size="12.0" />
+                                  </font>
+                                  <padding>
+                                      <Insets left="10.0" right="10.0" />
+                                  </padding>
+                              </JFXTextField>
+                     </children>
+                  </HBox>
+                        <JFXTextField fx:id="tfStreet_4" prefHeight="30.0" prefWidth="400.0" promptText="Strada...">
+                            <font>
+                                <Font name="System Italic" size="12.0" />
+                            </font>
+                            <padding>
+                                <Insets left="10.0" right="10.0" />
+                            </padding>
+                        </JFXTextField>
+                        <HBox prefHeight="30.0" prefWidth="580.0">
+                            <children>
+                                <JFXTextField fx:id="tfStreetNumber_4" prefHeight="30.0" prefWidth="400.0" promptText="Numar...">
+                                    <font>
+                                        <Font name="System Italic" size="12.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </JFXTextField>
+                                <JFXTextField fx:id="tfBlock_4" prefHeight="30.0" prefWidth="400.0" promptText="Bloc...">
+                                    <font>
+                                        <Font name="System Italic" size="12.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </JFXTextField>
+                                <JFXTextField fx:id="tfStair_4" prefHeight="30.0" prefWidth="400.0" promptText="Scara...">
+                                    <font>
+                                        <Font name="System Italic" size="12.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </JFXTextField>
+                                <JFXTextField fx:id="tfStorey_4" prefHeight="30.0" prefWidth="400.0" promptText="Etaj...">
+                                    <font>
+                                        <Font name="System Italic" size="12.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </JFXTextField>
+                                <JFXTextField fx:id="tfApartment_4" prefHeight="30.0" prefWidth="400.0" promptText="Apartament...">
+                                    <font>
+                                        <Font name="System Italic" size="12.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </JFXTextField>
+                            </children>
+                        </HBox>
+                  <HBox prefHeight="30.0" prefWidth="580.0">
+                     <children>
+                              <JFXButton fx:id="buttAddInv_4"
+                                         onAction="#addInv_4" prefHeight="40.0" prefWidth="580.0" text="Adauga beneficiar/investitor" />
+                        <JFXButton fx:id="buttContinue_4"
+                                   onAction="#continue_4" prefHeight="40.0" prefWidth="580.0" text="Continua -&gt;" />
+                     </children>
+                  </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="560.0" layoutY="10.0" prefHeight="30.0" prefWidth="30.0">
+            <children>
+                <JFXButton fx:id="closeButton" onAction="#closeButtonAction" prefHeight="30.0" prefWidth="30.0" ripplerFill="#d04e34" style="-fx-background-color: #d04e34;" text="X" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
