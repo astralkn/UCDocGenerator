@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.stage.Stage;
 import memoriu.documentaionGenerator.DocumetationGenerator;
+import memoriu.documentaionGenerator.TableOfContentGenerator;
 import memoriu.project.Project;
 
 import java.net.URL;
@@ -13,6 +14,7 @@ import java.util.ResourceBundle;
 public class Controller_9 extends Controller {
 
     DocumetationGenerator documetationGenerator;
+    TableOfContentGenerator tableOfContentGenerator;
 
     @Override
     public void initialize() {
@@ -20,8 +22,10 @@ public class Controller_9 extends Controller {
     }
 
     public void load(){
-        documetationGenerator = new DocumetationGenerator(this.project,"");
+        documetationGenerator = new DocumetationGenerator(this.project);
+        tableOfContentGenerator = new TableOfContentGenerator(this.project);
         documetationGenerator.genereazaMemoriu();
+        tableOfContentGenerator.generateTableOfContent();
     }
 
 

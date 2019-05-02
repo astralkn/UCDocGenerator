@@ -12,6 +12,7 @@ import memoriu.building.Building;
 import memoriu.person.Person;
 import memoriu.project.utilities.Utilities;
 import memoriu.property.Property;
+import memoriu.property.PropertyAct;
 import org.controlsfx.control.CheckListView;
 
 import java.util.ArrayList;
@@ -34,6 +35,9 @@ public class Controller_5 extends Controller {
     public JFXButton closeButton;
     public ListView listTerrains_6;
     public JFXButton buttContinue_6;
+    public JFXTextField tfPropertyDoc_5;
+    public JFXTextField tfPropertyDocIssueNo_5;
+    public JFXTextField tfPropertyDocIssuer_5;
     /*
     Utilities
      */
@@ -88,6 +92,9 @@ public class Controller_5 extends Controller {
             }
             property.setOwners(getSelectedOwners());
             property.setBuildings(getBuildings());
+            property.setPropertyActs(new PropertyAct(tfPropertyDoc_5.getText(),
+                    tfPropertyDocIssueNo_5.getText(),
+                    tfPropertyDocIssuer_5.getText()));
             project.addProperty(property);
             listTerrains_6.getItems().add(property);
             resetFields();
@@ -105,6 +112,9 @@ public class Controller_5 extends Controller {
         tfStreetNum_5.setText("");
         tfCadastralNum_5.setText("");
         tfTerrainSurface_5.setText("");
+        tfPropertyDoc_5.setText("");
+        tfPropertyDocIssueNo_5.setText("");
+        tfPropertyDocIssuer_5.setText("");
     }
 
     private boolean checkTerrainIsValid() {
@@ -158,6 +168,24 @@ public class Controller_5 extends Controller {
             isValid = false;
         } else {
             tfTerrainSurface_5.setStyle(null);
+        }
+        if (tfPropertyDoc_5.getText().equals("")){
+            tfPropertyDoc_5.setStyle(invalidField);
+            isValid = false;
+        } else {
+            tfPropertyDoc_5.setStyle(null);
+        }
+        if (tfPropertyDocIssueNo_5.getText().equals("")){
+            tfPropertyDocIssueNo_5.setStyle(invalidField);
+            isValid = false;
+        } else {
+            tfPropertyDocIssueNo_5.setStyle(null);
+        }
+        if (tfPropertyDocIssuer_5.getText().equals("")){
+            tfPropertyDocIssuer_5.setStyle(invalidField);
+            isValid = false;
+        } else {
+            tfPropertyDocIssuer_5.setStyle(null);
         }
         return isValid;
     }

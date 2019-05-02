@@ -10,6 +10,9 @@ import java.util.Arrays;
 
 public class Project {
     private String title;
+    private String chiefDeveloper;
+    private String prjDeveloper;
+    private String docCreator;
     private ProjectType projectType;
     private ArrayList<ProjectSubType> projectSubType;
     private LegalPerson projectDeveloper;
@@ -88,4 +91,27 @@ public class Project {
         this.title = title;
     }
 
+    public String getChiefDeveloper() {
+        return chiefDeveloper;
+    }
+
+    public void setChiefDeveloper(String chiefDeveloper) {
+        this.chiefDeveloper = chiefDeveloper;
+    }
+
+    public String getPrjDeveloper() {
+        return prjDeveloper;
+    }
+
+    public void setPrjDeveloper(String prjDeveloper) {
+        this.prjDeveloper = prjDeveloper;
+    }
+
+    public String getDocCreator() {
+        return docCreator;
+    }
+
+    public void setDocCreator(String docCreator) {
+        this.docCreator = docCreator;
+    }
 }

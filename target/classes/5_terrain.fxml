@@ -10,12 +10,11 @@
 <?import javafx.scene.text.*?>
 <?import org.controlsfx.control.CheckListView?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4e64bf;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memoriu.controller.Controller_5">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #4e64bf;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memoriu.controller.Controller_5">
     <children>
-        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="380.0" prefWidth="580.0" style="-fx-background-color: white;">
+        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="480.0" prefWidth="580.0" style="-fx-background-color: white;">
             <children>
-                <VBox prefHeight="380.0" prefWidth="580.0">
+                <VBox prefHeight="480.0" prefWidth="580.0">
                     <children>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="580.0" text="Generator memoriu Certificat de Urbanism" textAlignment="CENTER">
                             <font>
@@ -92,65 +91,67 @@
                               </JFXTextField>
                      </children>
                   </HBox>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="580.0" text="Racorduri existente pe teren" textAlignment="CENTER" />
-                  <HBox prefHeight="30.0" prefWidth="580.0">
+                  <HBox prefHeight="90.0" prefWidth="200.0">
                      <children>
-                        <HBox prefHeight="30.0" prefWidth="580.0" spacing="5.0">
+                        <CheckListView fx:id="listInvestors_5" prefHeight="90.0" prefWidth="190.0" />
+                        <VBox prefHeight="90.0" prefWidth="195.0">
                            <children>
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="190.0" text=" &lt;-Selecteaza detinatorul terenului" />
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="190.0" text="Actul de proprietate al terenului-&gt;" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="90.0" prefWidth="190.0">
+                           <children>
+                              <JFXTextField fx:id="tfPropertyDoc_5" promptText="Tipul(ex. Contract vanzare-cump.)">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="tfPropertyDocIssueNo_5" promptText="Nr. si data emiterii">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="tfPropertyDocIssuer_5" promptText="Emis de..." />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="150.0" prefWidth="570.0">
+                     <children>
+                        <VBox prefHeight="90.0" prefWidth="190.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="580.0" text="Racorduri existente pe teren" textAlignment="CENTER" />
                               <JFXCheckBox fx:id="cbWater_5" prefHeight="30.0" prefWidth="145.0" text="Apa" />
                               <JFXCheckBox fx:id="cbSewage_5" prefHeight="30.0" prefWidth="145.0" text="Canalizare" />
                               <JFXCheckBox fx:id="cbGas_5" prefHeight="30.0" prefWidth="145.0" text="Gaze" />
                               <JFXCheckBox fx:id="cbElectricity_5" prefHeight="30.0" prefWidth="145.0" text="Electricitate" />
                            </children>
-                           <padding>
-                              <Insets left="10.0" right="10.0" />
-                           </padding>
-                        </HBox>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="106.0" prefWidth="570.0">
-                     <children>
-                        <CheckListView fx:id="listInvestors_5"
-                                       prefHeight="90.0" prefWidth="190.0" />
+                        </VBox>
                         <VBox prefHeight="90.0" prefWidth="190.0">
                            <children>
-                              <Label alignment="CENTER" prefHeight="21.0" prefWidth="190.0" text="Cladiri Existente pe teren" />
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="190.0" text="Cladiri Existente pe teren" />
                               <HBox prefHeight="30.0" prefWidth="190.0">
                                  <children>
-                                    <JFXTextField
-                                            fx:id="tfBuildingFootPrint_5"
-                                            promptText="Sup.la Sol"/>
-                                    <JFXTextField fx:id="tfBuildingTotalArea_5"
-                                                  promptText="Sup.desf."/>
+                                    <JFXTextField fx:id="tfBuildingFootPrint_5" prefHeight="30.0" promptText="Sup.la Sol" />
+                                    <JFXTextField fx:id="tfBuildingTotalArea_5" prefHeight="30.0" promptText="Sup.desf." />
                                  </children>
                               </HBox>
-                              <HBox prefHeight="30.0" prefWidth="190.0">
-                                 <children>
-                                    <JFXTextField fx:id="tfBuildingMaterial_5"
-                                                  prefWidth="95.0"
-                                                  promptText="Mat.Cons."/>
-                                    <JFXTextField fx:id="tfBuildingState_5"
-                                                  prefWidth="95.0"
-                                                  promptText="Stare"/>
-                                 </children>
-                              </HBox>
+                              <JFXTextField fx:id="tfBuildingMaterial_5" prefHeight="30.0" prefWidth="95.0" promptText="Mat.Cons." />
+                              <JFXTextField fx:id="tfBuildingState_5" prefHeight="30.0" prefWidth="95.0" promptText="Stare" />
                               <JFXButton fx:id="buttAddBuilding_5" onAction="#addBuilding_5" prefHeight="30.0" prefWidth="190.0" text="Adauga Cladire-&gt;" />
                            </children>
                         </VBox>
-                        <ListView fx:id="listBuildings_5" prefHeight="90.0"
-                                  prefWidth="190.0" />
+                        <ListView fx:id="listBuildings_5" prefHeight="90.0" prefWidth="190.0" />
                      </children>
                      <VBox.margin>
                         <Insets left="5.0" right="5.0" />
                      </VBox.margin>
                   </HBox>
-                  <HBox prefHeight="30.0" prefWidth="580.0">
+                  <HBox prefHeight="50.0" prefWidth="580.0">
                      <children>
-                              <JFXButton fx:id="bttAddTerrain_6"
-                                         onAction="#addTerrain_5" prefHeight="40.0" prefWidth="580.0" text="Adauga teren" />
-                        <JFXButton fx:id="buttContinue_6"
-                                   onAction="#continue_5" prefHeight="40.0"
-                                   prefWidth="580.0" text="Continua -&gt;" />
+                              <JFXButton fx:id="bttAddTerrain_6" onAction="#addTerrain_5" prefHeight="40.0" prefWidth="580.0" text="Adauga teren" />
+                        <JFXButton fx:id="buttContinue_6" onAction="#continue_5" prefHeight="40.0" prefWidth="580.0" text="Continua -&gt;" />
                      </children>
                   </HBox>
                     </children>

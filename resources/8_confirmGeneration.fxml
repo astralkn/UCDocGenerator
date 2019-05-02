@@ -23,11 +23,35 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
-                  <HBox prefHeight="130.0" prefWidth="400.0">
+                  <VBox prefHeight="130.0" prefWidth="400.0">
                      <children>
-                        <JFXButton fx:id="buttContinue_8" onAction="#continue_8" prefHeight="125.0" prefWidth="400.0" text="Finalizeaza documentatia!" />
+                        <JFXTextField fx:id="tfPrjChiefDev_8" prefHeight="30.0" prefWidth="400" promptText="Sef proiect...">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="tfPrjDev_8" prefHeight="30.0" prefWidth="400" promptText="Proiectat...">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="tfDocCreator_8" prefHeight="30.0" prefWidth="400" promptText="Intocmit...">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXButton fx:id="buttContinue_8" onAction="#continue_8" prefHeight="40.0" prefWidth="400.0" text="Finalizeaza documentatia!" />
                      </children>
-                  </HBox>
+                  </VBox>
                </children>
             </VBox>
          </children>

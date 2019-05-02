@@ -17,7 +17,7 @@ public class Property {
     private Address address;
     private ArrayList<UTR> UTRS;
     private ArrayList<UTR> newUTRS;
-    private PropertyAct[] propertyActs;
+    private PropertyAct propertyActs;
 
     public Property() {
         owners = new ArrayList<Person>();
@@ -83,11 +83,11 @@ public class Property {
         this.UTRS = UTRS;
     }
 
-    public PropertyAct[] getPropertyActs() {
+    public PropertyAct getPropertyActs() {
         return propertyActs;
     }
 
-    public void setPropertyActs(PropertyAct[] propertyActs) {
+    public void setPropertyActs(PropertyAct propertyActs) {
         this.propertyActs = propertyActs;
     }
 
