@@ -33,7 +33,7 @@ public class Controller_2Arc extends Controller {
     public void continue_2(ActionEvent actionEvent) {
         ArrayList<ProjectSubType> projectSubTypes = new ArrayList<>();
         if (cbDTAD_2.isSelected() || cbDTAC_2.isSelected()) {
-            if (cbDTAD_2.isSelected() || cbDTAC_2.isSelected()) {
+            if (cbDTAD_2.isSelected() && cbDTAC_2.isSelected()) {
                 projectSubTypes.add(ProjectSubType.DTAC);
                 projectSubTypes.add(ProjectSubType.DTAD);
                 project.setProjectSubType(projectSubTypes);

@@ -190,6 +190,10 @@ public class DocumetationGenerator {
             }
 
         }
+        createBoldParagraph("Intocmit,",document);
+        createBoldParagraph(project.getDocCreator(),document);
+        createBoldParagraph("Verificat,",document);
+        createBoldParagraph(project.getChiefDeveloper(),document);
     }
 
     private void tabelLucrare(XWPFDocument document, FileOutputStream out) throws IOException {
@@ -235,7 +239,17 @@ public class DocumetationGenerator {
         XWPFTableRow tableRowEight = table.createRow();
         tableRowEight.getCell(0).setText("7");
         tableRowEight.getCell(1).setText("Sef Proiecte:");
-        tableRowEight.getCell(2).setText("TBW");
+        tableRowEight.getCell(2).setText(project.getChiefDeveloper());
+
+        XWPFTableRow tableRowNine = table.createRow();
+        tableRowNine.getCell(0).setText("");
+        tableRowNine.getCell(1).setText("Proiectat");
+        tableRowNine.getCell(2).setText(project.getPrjDeveloper());
+
+        XWPFTableRow tableRowTen = table.createRow();
+        tableRowTen.getCell(0).setText("");
+        tableRowTen.getCell(1).setText("Intocmit:");
+        tableRowTen.getCell(2).setText(project.getDocCreator());
 
         CTTblPr tblpro = table.getCTTbl().getTblPr();
 
@@ -244,7 +258,7 @@ public class DocumetationGenerator {
         borders.addNewLeft().setVal(STBorder.NONE);
         borders.addNewRight().setVal(STBorder.NONE);
         borders.addNewTop().setVal(STBorder.SINGLE);
-//also inner borders
+
         borders.addNewInsideH().setVal(STBorder.NONE);
         borders.addNewInsideV().setVal(STBorder.NONE);
 
