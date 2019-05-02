@@ -116,6 +116,13 @@ public class TableOfContentGenerator {
                     "intabulare");
             tableRowEight.getCell(2).setText("");
             nrCrt++;
+            XWPFTableRow tableRowNine = table.createRow();
+            tableRowNine.getCell(0).setText(String.valueOf(nrCrt));
+            tableRowNine.getCell(1).setText("Extras de carte funciara teren " +
+                    "strada" + p.getAddress().getStreet() +
+                    ", numar " + p.getAddress().getStreetNumber());
+            tableRowNine.getCell(2).setText("");
+            nrCrt++;
         }
 
         for (Property p: projectDataExtractor.getProperties()
